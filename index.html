@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<style>
+		body {
+		  margin: 0px;
+		  font-family: 'Raleway', sans-serif;
+		  display: none;
+		}
+	</style>
+</head>
+<body class = "contenedor-contenido-pagina">
+	<header>
+		<div class="dropdown"><span id = "nombre" value = ""></span>
+		<button onclick="myFunction();return false;" class="dropbtn">&#9776;</button>
+		<div id="myDropdown" class="dropdown-content">
+		<a href="coders.html">Coders</a>
+		<a href="salir.html">Salir</a>
+		</div>
+		</div>
+		<div id = logo>
+			<img src="assets/img/logo.png" alt="" height="200" align="center">
+		</div>
+	</header>
+	<p>
+		<h3><b>¿Que es Laboratoria	?</b></h3>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis velit, magnam adipisci sunt omnis corporis ad enim odit odio, quia quae fuga consectetur labore ex, perferendis laborum beatae, vitae architecto!
+	</p>
+	<label for=""><b>Temas</b></label><br><br>
+	<input type="button" value="Mostar/ocultar 1" onclick="mostarOcultar('text1')" >
+	<input type="button" value="Mostar/ocultar 2" onclick="mostarOcultar('text2')">
+	<input type="button" value="Mostar/ocultar 3" onclick="mostarOcultar('text3')">
+	<br/>
+		<div id="text1"><b>Sprint 1 Introducción al Desarrollo Web </b>
+			<ol>
+				<li>Fundamentos de Programacion</li>
+				<li>Funciones</li>
+				<li>Arreglos</li>
+				<li>Objetos</li>
+			</ol>
+			<hr>
+			<h3><b>Quiz</b></h3>
+			<div id = "records"></div>
+			<form id = "1" action="" onsubmit="validar(1); return false;">
+				<div id = "">
+				<h4>¿Existen dos tipos de funciones?</h4>
+					<input type="radio" id = "a" name = "p1" class = "1" value="" required> Expresadas y declaradas<br>
+					<input type="radio" id = "b" name = "p1" class = "1" value="" required> Explicitas y declaradas<br>
+					<input type="radio" id = "c" name = "p1" class = "1" value="" required> Expresadas y rerivadas  
+				</div>
+				<div id = "">
+					<h4>Elige una propiedad de los arreglos</h4>
+					<input type="radio" id = "a" name = "p2" class = "1" value="" required> clear<br>
+					<input type="radio" id = "b" name = "p2" class = "1" value="" required> pop<br>
+					<input type="radio" id = "c" name = "p2" class = "1" value="" required> add 
+				</div> 
+				<div id = "">
+					<h4>Un objeto tiene ------ y-------</h4>
+					<input type="radio" id = "a" name = "p3" class = "1" value="" required>numeros y letras<br>
+					<input type="radio" id = "b" name = "p3" class = "1" value="" required> partes y validacione<br>
+					<input type="radio" id = "c" name = "p3" class = "1" value="" required> propieades y valores
+				</div> 
+				<br>
+				<button class="" type="submit" onclick= "" >Enviar</button><br>
+			</form>
+		</div>
+		<div id="text2"><b>Sprint 2 Introducción al Desarrollo Web </b>
+			<ol>
+				<li>Ciclo de vida del desarrollo Web</li>
+				<li>HTML y JavScript en el navegador</li>
+				<li>MAnejo de comandos basicos de git en el terminal</li>
+				<li>pruebas unitarias</li>
+				<li>Git / Resolución de conflictos / branching model</li>
+				<li>DOM</li>
+			</ol><hr>
+			<h3><b>Quiz</b></h3>
+			<div id = "records2"></div>
+		<form id = "2" action="" onsubmit="validar(2); return false;">
+				<div id = "">
+				<h4>¿Cual es tu comando para iniciar un repositorio desde la consola?</h4>
+					<input type="radio" id = "a" name = "p1" class = "2" value="" required> git init<br>
+					<input type="radio" id = "b" name = "p1" class = "2" value="" required> git init .<br>
+					<input type="radio" id = "c" name = "p1" class = "2" value="" required> git add init  
+				</div>
+				<div id = "">
+					<h4>¿Cual es la finalidad de hacer una prueba unitaria?</h4>
+					<input type="radio" id = "a" name = "p2" class = "2" value="" required> Comparar que el codigo funciona correctamente<br>
+					<input type="radio" id = "b" name = "p2" class = "2" value="" required> Darle valores a los parametros de dichas fucniones<br>
+					<input type="radio" id = "c" name = "p2" class = "2" value="" required> No tiene ningún fin 
+				</div> 
+				<div id = "">
+					<h4>¿Que significa DOM?</h4>
+					<input type="radio" id = "a" name = "p3" class = "2" value="" required>Dual Object Model<br>
+					<input type="radio" id = "b" name = "p3" class = "2" value="" required> Document Object Model<br>
+					<input type="radio" id = "c" name = "p3" class = "2" value="" required> Document Obsolet Model
+				</div> 
+				<br>
+				<button class="" type="submit" onclick='' >Enviar</button><br><br>
+			</form>
+		</div>
+		<div id="text3"><b>Sprint 3 Introducción al Desarrollo Web </b>
+			<h4>Todavía no hay contenido</h4>  
+		</div>
+	<script src = "assets/js/app.js"></script>
+	
+</body>
+</html>

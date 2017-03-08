@@ -7,16 +7,21 @@ var records2 = document.getElementById('records2');
 var text1 = document.getElementById('text1');
 var text2 = document.getElementById('text2');
 var text3 = document.getElementById('text3');
+var nombre ="";
 function login(){
-	var nombre = "";
-	do{
-		sessionStorage.getItem("Nombre");
-		nombre = prompt("Cual es Nombre");
-		document.getElementById('nombre').innerHTML = "Hola coder "+ nombre;
+	
+	if(sessionStorage.getItem("Nombre")){
 		document.body.style.display = "block";
-		sessionStorage.setItem("Nombre", nombre);
+		document.getElementById('nombre').innerHTML = "Hola coder "+ sessionStorage.getItem("Nombre");
 	}
-	while(nombre == "");
+	else{
+		do{
+			nombre = prompt("Cual es Nombre");
+			sessionStorage.setItem("Nombre", nombre.charAt(0).toUpperCase()+nombre.substring(1));
+			document.getElementById('nombre').innerHTML = "Hola coder "+ sessionStorage.getItem("Nombre");
+			document.body.style.display = "block";
+		}while(nombre == "")
+	}
 }
 
 function myFunction() {
@@ -29,16 +34,16 @@ window.addEventListener('load',function() {
 function validar(sprint){
 	var correctas = 0;
 	var respuesta = [];
-	var k = 0;
+	//var k = 0;
 	var test ;
 	var radios = document.getElementsByClassName(sprint);
 
-	for (var i = 0 ; i < radios.length; i++) {
+	/*for (var i = 0 ; i < radios.length; i++) {
 		if(radios[i].checked){
 			k += 1;
 		}
-	}
-	console.log(k);
+	}*/
+	//console.log(k);
 	/*if(k != 3){
 		//alert("Marque una respuesta en la pregunta");
 	}

@@ -62,7 +62,7 @@ input {
 }
 
 img{
-  padding-left: 30%;
+  text-align:  center;
 }
 #text1{
   display : none;
@@ -86,7 +86,7 @@ img{
 .dropdown {
   position: relative;
   display: inline-block;
-  padding-left: 85%;
+  /*padding-left: 85%;*/
 }
 
 .dropdown-content {

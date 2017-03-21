@@ -2,7 +2,7 @@
 var respuestas =[['a','b','c'],['a','b','b']];
 var form1 = document.getElementById('1');
 var form2 = document.getElementById('2');
-var records1 = document.getElementById('records');
+var records1 = document.getElementById('records1');
 var records2 = document.getElementById('records2');
 var text1 = document.getElementById('text1');
 var text2 = document.getElementById('text2');
@@ -54,19 +54,22 @@ function validar(sprint){
 		}
 	}
 	console.log(respuesta);
-	if(sprint == "1"){
-		test = respuestas[0];
-	}
-	if(sprint == "2"){
-		test = respuestas[1];
-	}
-	for (var i = 0 ; i < test.length; i++) {
-		if(respuesta[i] === test[i]){
+	
+	for (var i = 0 ; i < respuestas[sprint-1].length; i++) {
+		if(respuesta[i] === respuestas[sprint-1][i]){
 			correctas ++;
 		}
 	}
-	records1.innerHTML = "Tienes "+ correctas + " correctas";
-	records2.innerHTML = "Tienes "+ correctas + " correctas";
+	if(sprint == "1"){
+		test = respuestas[0];
+		records1.innerHTML = "Tienes "+ correctas + " correctas";
+	}
+	if(sprint == "2"){
+		test = respuestas[1];
+		records2.innerHTML = "Tienes "+ correctas + " correctas";
+	}
+	// records1.innerHTML = "Tienes "+ correctas + " correctas";
+	// records2.innerHTML = "Tienes "+ correctas + " correctas";
 	limpiar(sprint);
 	console.log(correctas);
 	//}
@@ -89,7 +92,7 @@ window.onclick = function(event) {
 function limpiar(quiz){
 	var radios  = document.getElementsByClassName(quiz);
 	form1.style.display = "none";
-	form2.style.display = "none"
+	form2.style.display = "none";
 	console.log(form1);
 	for (var i = 0 ; i < radios.length ; i++) {
 		radios[i].checked = false;
@@ -99,10 +102,10 @@ function limpiar(quiz){
 
 var mostarOcultar = function(divtexte) {
 	var divtext = document.getElementById(divtexte);
-	records1.innerHTML ="";
-	records2.innerHTML = "";
+	// records1.innerHTML ="";
+	// records2.innerHTML = "";
 	form1.style.display = "block";
-	form2.style.display = "block"
+	form2.style.display = "block";
 	if (divtext.id == "text1" ) {
 		divtext.style.display = "block";
 		text2.style.display = "none";
